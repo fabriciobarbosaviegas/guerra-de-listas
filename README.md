@@ -45,9 +45,9 @@ Naipes e cores das cartas não são considerados. Cartas de mesmo valor são con
 1. Em cada rodada, escolha uma das seguintes [jogadas possíveis](#jogadas-possíveis):
     - [Adicionar carta à lista principal](#adicionar-carta-à-lista-principal).
     - [Roubar carta da lista principal](#roubar-carta-da-lista-principal).
-    - [Roubar cartas da lista de outro jogador](#roubar-carta-da-lista-de-outro-jogador).
-    - [Descartar uma carta da própria lista](#descartaer-uma-carta-da-própria-lista).
-    - [Ordenar a própria lista](#ordernar-a-própria-lista).
+    - [Roubar cartas da lista de outro jogador](#roubar-cartas-da-lista-de-outro-jogador).
+    - [Descartar uma carta da própria lista](#cartas-da-própria-lista).
+    - [Ordenar a própria lista](#ordenar-a-própria-lista).
 
 2. Os turnos seguem no sentido horário.
 
