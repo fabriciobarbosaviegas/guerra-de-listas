@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+main{
+    text-align: -webkit-center;
+}
+
+.highlight{
+    position: relative;
+    z-index: 1055 !important;
+}
+
+.midCardLeft li{
+    transform: rotate(90deg);
+}
+
+.midCardRight li{
+    transform: rotate(270deg);
+}
+
+.dragable{
+    cursor: grab;
+}
+
+.playerCard{
+    cursor: pointer;
+}
+
+.playerCard:hover{
+    opacity: 90%;
+    margin-bottom: 1rem;
+}

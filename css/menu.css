@@ -1,0 +1,22 @@
+body{
+    background: #ffd3a3 !important;
+}
+
+#menuCards{
+    height: 7rem;
+}
+
+.sword{
+    background-image: url(../img/sword.png);
+    background-size: contain;
+}
+
+@media (min-width: 1200px){
+    .container{
+        margin-top: 14vh;
+        padding: 3rem;
+        border-radius: 1rem;
+        max-width: 500px;
+        
+    }
+}
