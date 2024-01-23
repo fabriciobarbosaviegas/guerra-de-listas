@@ -1,8 +1,15 @@
 # Guerra de Listas
  A Guerra de Listas é um jogo de cartas simples, baseado no clássico Rouba Monte, que visa ensinar o conceito de listas de uma forma divertida. Cada carta representa um elemento em uma lista, e os jogadores competem para construir suas próprias listas enquanto tentam roubar as listas dos outros jogadores.
 
+# Ìndice:
+    1. [Guerra de Listas](#guerra-de-listas)
+    2. [Breve resumo dos conceitos aplicados](#breve-resumo-dos-conceitos-aplicados)
+        - [Conceitos da Computação](#conceitos-da-Computação)
+        - [Conceitos Pedagógicos](#conceitos-pedagógicos)
+    3. [Regras do Jogo](#regras-do-jogo)
+
 # Breve resumo dos conceitos aplicados
-## Conceitos de Computação:
+## Conceitos da Computação:
 1. ### Listas:
     - No jogo, as listas são representadas como conjuntos ordenados de cartas. Os jogadores aprendem a criar, manipular e ordenar listas, conceitos fundamentais na programação e na ciência da computação.
 
