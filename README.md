@@ -22,32 +22,32 @@ Naipes e cores das cartas não são considerados. Cartas de mesmo valor são con
 5. À esquerda da lista principal está o baralho, à direita, a "pilha de descarte".
 
 ## Jogadas Possíveis:
-1. Adicionar carta à lista principal:
+### 1. Adicionar carta à lista principal:
     - Jogue uma carta não presente em sua lista, na lista principal.
 
-2. Roubar carta da lista principal:
+### 2. Roubar carta da lista principal:
     - Jogue uma carta presente na lista principal.
     - A carta vai para a pilha de descarte; a carta da lista principal vai para o final da lista do jogador.
     - Se a lista principal esvaziar, adicione 4 cartas novas.
 
-3. Roubar cartas da lista de outro jogador:
+### 3. Roubar cartas da lista de outro jogador:
     - Jogue uma carta presente na lista de outro jogador.
     - A carta vai para a pilha de descarte; roube todas as cartas a partir dela da lista do jogador.
     - Movimente as cartas roubadas para o final da sua lista.
 
-4. Cartas da própria lista:
+### 4. Cartas da própria lista:
     - Jogue uma carta presente em sua lista; ela é descartada.
 
-5. Ordenar a própria lista:
+### 5. Ordenar a própria lista:
     - Gaste um turno para mudar a posição das cartas em sua lista.
 
 ## Como Jogar:
-1. Em cada rodada, escolha uma das seguintes jogadas possíveis:
-    - Adicionar carta à lista principal.
-    - Roubar carta da lista principal.
-    - Roubar cartas da lista de outro jogador.
-    - Descartar uma carta da própria lista.
-    - Ordenar a própria lista.
+1. Em cada rodada, escolha uma das seguintes [jogadas possíveis](#jogadas-possíveis):
+    - [Adicionar carta à lista principal](#adicionar-carta-à-lista-principal).
+    - [Roubar carta da lista principal](#roubar-carta-da-lista-principal).
+    - [Roubar cartas da lista de outro jogador](#roubar-carta-da-lista-de-outro-jogador).
+    - [Descartar uma carta da própria lista](#descartaer-uma-carta-da-própria-lista).
+    - [Ordenar a própria lista](#ordernar-a-própria-lista).
 
 2. Os turnos seguem no sentido horário.
 
