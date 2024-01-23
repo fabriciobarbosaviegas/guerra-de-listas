@@ -1,5 +1,36 @@
 # Guerra de Listas
- A "Guerra de Listas" é um jogo de cartas simples, baseado no clássico "Rouba Monte", que visa ensinar o conceito de listas de uma forma divertida. Cada carta representa um elemento em uma lista, e os jogadores competem para construir suas próprias listas enquanto tentam roubar as listas dos outros jogadores.
+ A Guerra de Listas é um jogo de cartas simples, baseado no clássico Rouba Monte, que visa ensinar o conceito de listas de uma forma divertida. Cada carta representa um elemento em uma lista, e os jogadores competem para construir suas próprias listas enquanto tentam roubar as listas dos outros jogadores.
+
+# Breve resumo dos conceitos aplicados
+## Conceitos de Computação:
+1. ### Listas:
+    - No jogo, as listas são representadas como conjuntos ordenados de cartas. Os jogadores aprendem a criar, manipular e ordenar listas, conceitos fundamentais na programação e na ciência da computação.
+
+2. ### Manipulação de Dados:
+    - Os jogadores praticam a adição, remoção e ordenação de elementos em suas listas, desenvolvendo habilidades essenciais de manipulação de dados. Isso reflete diretamente na capacidade de trabalhar com estruturas de dados.
+
+3. ### Estrutura de Dados:
+    - O jogo incentiva a compreensão dos conceitos que envolvem a estrutura de dados lista, girando inteiramente em torno de listas encadeadas (as listas dos jogadores). Isso ajuda os alunos a visualizarem e compreenderem de forma prática essa estrutura.
+
+4. ### Algoritmos e Estratégias:
+    - Os jogadores precisam desenvolver estratégias para otimizar suas listas, decidindo quando adicionar, roubar ou descartar cartas. Essa tomada de decisão reflete a lógica, um componente essencial da computação.
+
+5. ### Lógica de Jogo:
+    - O jogo ensina aos jogadores a pensar logicamente, prevendo movimentos futuros e antecipando as ações dos oponentes. Essa habilidade é transferível para a resolução de problemas.
+
+## Conceitos Pedagógicos:
+
+1. ### Aprendizado Baseado em Jogos:
+    - Utilizando a abordagem de aprendizado baseado em jogos, tornando o ensino de conceitos de computação mais envolvente e lúdico. Os alunos aprendem de maneira ativa e participativa.
+
+2. ### Competição:
+    - Ao envolver os alunos em um ambiente competitivo, o jogo promove habilidades sociais. A competição saudável incentiva a dedicação aos objetivos.
+
+3. ### Motivação Instrínseca:
+    - O elemento de jogo intrinsecamente motiva os alunos. Eles não apenas aprendem os conceitos de computação, mas também se divertem no processo, desenvolvendo uma atitude positiva em relação ao aprendizado.
+
+4. ### Aplicação Prática:
+    - O jogo permite que os alunos apliquem diretamente os conceitos aprendidos, proporcionando uma compreensão mais profunda e prática. A aplicação prática contribui para uma aprendizagem mais significativa.
 
 # Regras do Jogo
 ## Objetivo do Jogo:
