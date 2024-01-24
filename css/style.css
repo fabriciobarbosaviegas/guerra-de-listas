@@ -36,3 +36,11 @@ main{
     opacity: 90%;
     margin-bottom: 1rem;
 }
+
+.modal{
+    padding-right: 0!important;
+}
+.modal-backdrop{
+    width: 100%!important;
+    height: 100%!important;
+}
