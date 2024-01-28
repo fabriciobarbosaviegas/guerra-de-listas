@@ -11,9 +11,21 @@ main{
     text-align: -webkit-center;
 }
 
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .highlight{
     position: relative;
     z-index: 1055 !important;
+}
+
+
+#gameOverModal{
+    z-index: 2000 !important;
 }
 
 .midCardLeft li{
@@ -44,3 +56,8 @@ main{
     width: 100%!important;
     height: 100%!important;
 }
+
+.modal-backdrop.show:nth-of-type(even) {
+    z-index: 1061 !important;
+}
+    

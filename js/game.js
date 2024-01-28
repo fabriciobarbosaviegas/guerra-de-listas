@@ -59,27 +59,25 @@ function startMainList(){
 }
 
 function reset(player){
-    if(document.querySelector(`#playerHandCounter${player}`).innerText == 0){
+    
+    if(document.querySelector(`#playerHandCounter${player}`).innerText == 0/* && deck.length != 0*/){
         startPlayerHand(player);
-        if(!drawTutorial){
+        if(!drawTutorial && tutorialBool){
             drawTutorial = true;
             drawTutorialTip();
         }
     }
-    if(document.querySelector("#mainListCounter").innerText == 0){
+    if(document.querySelector("#mainListCounter").innerText == 0/* && deck.length != 0*/){
         startMainList();
-        if(!drawTutorial){
+        if(!drawTutorial && tutorialBool){
             drawTutorial = true;
             drawTutorialTip();
         }
     }
     turnCards(currentPlayer);
-    //turn(currentPlayer);
 }
 
 function startPlayerHand(player){
-    console.log(gameOver());
-
     let newHand = draw();
 
     for(let i = 0; i < newHand.length; i++){
@@ -90,6 +88,7 @@ function startPlayerHand(player){
 
     for(let i = 0; i < cards.length; i++){
         cards[i].addEventListener("click", (e) => {
+            gameOver();
             selectedCard = e["target"].name;
 
             if(e["target"].id[e["target"].id.length-1] == currentPlayer && document.querySelector(`#playerHandCounter${currentPlayer}`).innerText != 0){
@@ -113,9 +112,6 @@ function startPlayerHand(player){
                 reset(player);
                 seeSortOption(player);
                 updateLists();
-            }
-            else{
-                gameOver();
             }
         })
     }
