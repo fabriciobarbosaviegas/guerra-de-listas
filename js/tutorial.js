@@ -82,14 +82,14 @@ function tutorialTips(){
 
 function defaultPlayTip(){
     console.log('normal')
-    createModalTip('default', 'Você não pode fazer nenhuma grande jogado no momento, selecione uma carta para adicionar a lista principal.');
+    createModalTip('default', 'Você não pode fazer nenhuma grande jogada no momento, selecione uma carta para adicionar a lista principal.');
     defaultModal = new bootstrap.Modal(document.querySelector("#defaultModal"), {});
     defaultModal.show();
     
     normalTutorial = true;
 
     document.querySelector('#defaultModal').querySelector('button').addEventListener('click', () => {
-        document.querySelector('#defaultMessage').innerHTML = 'Após jogar uma carta que não exista nem na lista principal, nem na lista de um dos jogadores, ela é adicionada a lista principal para que possa ser pega por outro jogador no próximo turno, encerrando sua vez.';
+        document.querySelector('#defaultMessage').innerHTML = 'Após jogar uma carta que não exista nem na lista principal, nem na lista de um dos jogadores, ela é adicionada a lista principal para poder ser pega por outro jogador no próximo turno, encerrando sua vez.';
         document.querySelector('#defaultModal').querySelector('button').addEventListener('click', () => {
             defaultModal.hide();
         });
@@ -105,7 +105,7 @@ function mainListPlayTip(handCardIndex){
 
     document.querySelectorAll('#playerCard1')[handCardIndex].addEventListener('click', () => {
         mainTutorial = true;
-        document.querySelector('#mainListMessage').innerHTML = 'Sempre que jogar uma carta existente na lista principal essa carta será removida de lá e adicionada a sua lista, enquanto a carta que você jogou originalmente irá para a pilha de descarte, encerrando sua vez.';
+        document.querySelector('#mainListMessage').innerHTML = 'Sempre que jogar uma carta existente na lista principal, essa carta será removida de lá e adicionada a sua lista, enquanto a carta que você jogou originalmente irá para a pilha de descarte, encerrando sua vez.';
         document.querySelector('#playerList1').classList.add('highlight');
         mainListModal.show();
     });
@@ -155,7 +155,7 @@ function ownListPlayTip(handCardIndex){
 
     document.querySelectorAll('#playerCard1')[handCardIndex].addEventListener('click', () => {
         ownListTutorial = true;
-        document.querySelector('#ownListMessage').innerHTML = 'Sempre que jogar uma carta existente em sua própria lista ela será removida de sua mão e adicionada a pilha de descarte, encerrando sua vez.';
+        document.querySelector('#ownListMessage').innerHTML = 'Sempre que jogar uma carta existente em sua própria lista, ela será removida de sua mão e adicionada a pilha de descarte, encerrando sua vez.';
         document.querySelector('#playerList1').classList.add('highlight');
         ownListModal.show();
             
@@ -204,7 +204,7 @@ function tutorialIntro(){
         document.querySelector('#mainListContainer').classList.remove('show');
         document.querySelector('#mainListContainer').classList.remove('highlight');
         document.querySelector('#mainListContainer').classList.remove('fade');
-        document.querySelector('#tutorialMessage').innerHTML = 'Em seguida, cada jogar também recebe 4 cartas do baralho.<br><br><span style="color:red">*Importante: Nesse jogo os naipes das cartas serão ignorados, consideramos como iguais todas as cartas que possuirem o mesmo número ou figura, indepedente de naipe ou cor.</span>';
+        document.querySelector('#tutorialMessage').innerHTML = 'Em seguida, cada jogar também recebe 4 cartas do baralho.<br><br><span style="color:red">*Importante: Nesse jogo os naipes das cartas serão ignorados, consideramos como iguais todas as cartas que possuírem o mesmo número ou figura, independente de naipe ou cor.</span>';
         modalTutorial.show();
 
         for(let i = 1; i <= 4; i++){
@@ -265,7 +265,7 @@ function tutorialIntro(){
 
 function drawTutorialTip(){
     console.log('draw')
-    createModalTip('drawTip','Sempre que uma mão ou a lista principal forem esvaziadas as 4 cartas são repostas, o jogo segue até que as cartas da mão de algum jogador acabe e ele não possa mais comprar.')
+    createModalTip('drawTip','Sempre que uma mão ou a lista principal forem esvaziadas, as 4 cartas são repostas, o jogo segue até que as cartas da mão de algum jogador acabe e ele não possa mais comprar.')
     let modalTip = new bootstrap.Modal(document.querySelector("#drawTipModal"), {});
     modalTip.show();
     document.querySelector('#deck').classList.add('highlight');
