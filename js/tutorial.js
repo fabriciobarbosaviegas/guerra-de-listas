@@ -151,6 +151,7 @@ function ownListPlayTip(handCardIndex){
     ownListModal = new bootstrap.Modal(document.querySelector("#ownListModal"), {});
     
     ownListModal.show();
+    
     document.querySelectorAll('#playerCard1')[handCardIndex].classList.add('highlight');
 
     document.querySelectorAll('#playerCard1')[handCardIndex].addEventListener('click', () => {
@@ -193,14 +194,14 @@ function sortListTutorialTip(){
 
 function tutorialIntro(){
     console.log(tutorialStep)
-    if(tutorialStep == 1){
+    if(tutorialStep == 1 && tutorialBool){
         document.querySelectorAll('.modal-dialog-centered')[1].classList.remove('modal-dialog-centered');
         document.querySelector('#tutorialMessage').innerHTML = 'O jogo se inicia com a distribuição de 4 cartas no centro da mesa, chamaremos esse centro de "lista principal".';
         modalTutorial.show();
         document.querySelector('#mainListContainer').classList.add('show');
         document.querySelector('#mainListContainer').classList.add('highlight');
     }
-    else if(tutorialStep == 2){
+    else if(tutorialStep == 2 && tutorialBool){
         document.querySelector('#mainListContainer').classList.remove('show');
         document.querySelector('#mainListContainer').classList.remove('highlight');
         document.querySelector('#mainListContainer').classList.remove('fade');
@@ -212,7 +213,7 @@ function tutorialIntro(){
             document.querySelector(`#playerHandCards${i}`).classList.add('highlight');
         }
     }
-    else if(tutorialStep == 3){
+    else if(tutorialStep == 3 && tutorialBool){
         for(let i = 1; i <= 4; i++){
             document.querySelector(`#playerHandCards${i}`).classList.remove('show');
             document.querySelector(`#playerHandCards${i}`).classList.remove('highlight');
@@ -227,7 +228,7 @@ function tutorialIntro(){
         document.querySelector('#tutorialMessage').innerHTML = 'Além da lista principal cada jogador também possui sua própria lista, que serve como pontuação, ao final do jogo vencerá o jogador com o maior número de cartas em sua lista.';
         modalTutorial.show();
     }
-    else if(tutorialStep == 4){
+    else if(tutorialStep == 4 && tutorialBool){
         for(let i = 1; i <= 4; i++){            
             document.querySelector(`#playerList${i}`).classList.remove('show');
             document.querySelector(`#playerList${i}`).classList.remove('highlight');
@@ -243,7 +244,7 @@ function tutorialIntro(){
         modalTutorial.show();
     
     }
-    else if(tutorialStep == 5){
+    else if(tutorialStep == 5 && tutorialBool){
         document.querySelector(`#tutorialModal`).querySelector('.modal-dialog').classList.remove('fixed-bottom');
     
         document.querySelector(`#trash`).classList.remove('show');
@@ -253,6 +254,26 @@ function tutorialIntro(){
         document.querySelector('#tutorialMessage').innerHTML = 'Agora vamos jogar!';
     
         modalTutorial.show();
+    }
+    else if(!tutorialBool){
+        modalTutorial.hide();
+
+        document.querySelector('#mainListContainer').classList.remove('show');
+        document.querySelector('#mainListContainer').classList.remove('highlight');
+        document.querySelector('#mainListContainer').classList.remove('fade');
+
+        for(let i = 1; i <= 4; i++){
+            document.querySelector(`#playerHandCards${i}`).classList.remove('show');
+            document.querySelector(`#playerHandCards${i}`).classList.remove('fade');
+        }
+
+        for(let i = 1; i <= 4; i++){            
+            document.querySelector(`#playerList${i}`).classList.remove('show');
+            document.querySelector(`#playerList${i}`).classList.remove('fade');
+        }
+
+        document.querySelector(`#trash`).classList.remove('show');
+        document.querySelector(`#trash`).classList.remove('fade');
     }
     else{
         tutorialTips();
@@ -264,18 +285,20 @@ function tutorialIntro(){
 }
 
 function drawTutorialTip(){
-    console.log('draw')
-    createModalTip('drawTip','Sempre que uma mão ou a lista principal forem esvaziadas, as 4 cartas são repostas, o jogo segue até que as cartas da mão de algum jogador acabe e ele não possa mais comprar.')
-    let modalTip = new bootstrap.Modal(document.querySelector("#drawTipModal"), {});
-    modalTip.show();
-    document.querySelector('#deck').classList.add('highlight');
-    
-    document.querySelector('#drawTipModal').querySelector('button').addEventListener('click', () => {
-        if(document.querySelector('#deck')){
-            document.querySelector('#deck').classList.remove('highlight');   
-        }
-        modalTip.hide();
-     });
+    if(tutorialBool){   
+        console.log('draw')
+        createModalTip('drawTip','Sempre que uma mão ou a lista principal forem esvaziadas, as 4 cartas são repostas, o jogo segue até que as cartas da mão de algum jogador acabe e ele não possa mais comprar.')
+        let modalTip = new bootstrap.Modal(document.querySelector("#drawTipModal"), {});
+        modalTip.show();
+        document.querySelector('#deck').classList.add('highlight');
+        
+        document.querySelector('#drawTipModal').querySelector('button').addEventListener('click', () => {
+            if(document.querySelector('#deck')){
+                document.querySelector('#deck').classList.remove('highlight');   
+            }
+            modalTip.hide();
+        });
+    }
 }
 
 function createModalTip(name, text){
@@ -317,7 +340,6 @@ let modalTutorial = new bootstrap.Modal(document.querySelector("#tutorialModal")
 document.querySelector('#tutorialMessage').innerHTML = 'Bem-Vindo ao tutorial, iniciaremos a experiência com um jogo orientado e a medida que os conceitos forem compreendidos, iremos retirar as "rodinhas".'
 
 if(tutorialBool){
-
     modalTutorial.show()
 }
 
