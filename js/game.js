@@ -78,6 +78,7 @@ function reset(player){
 }
 
 function startPlayerHand(player){
+    gameOver();
     let newHand = draw();
 
     for(let i = 0; i < newHand.length; i++){
@@ -206,7 +207,7 @@ function stealsList(card, player){
 }
 
 function seeSortOption(player){
-    if(document.querySelector(`#playerList${player}Counter`).innerText == 0 || player != currentPlayer){
+    if(document.querySelectorAll(`#player${player}ListCard`).length <= 1 || player != currentPlayer){
         document.querySelector(`#sortButton${player}`).classList.add("d-none")
     }
     else{
@@ -280,7 +281,7 @@ function turnCards(player){
                 playerHand[j].classList.remove("playerCard");
             }
         }
-        else{
+        else if(!botBool || currentPlayer == 1){
             let playerHand = document.querySelectorAll(`#playerCard${player}`);
             let playerHandSize = playerHand.length;
             for(let j = 0; j < playerHandSize; j++){

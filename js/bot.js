@@ -62,8 +62,14 @@ function playerBot(player){
                 playIndex = 0;
             }
         }
-        document.querySelectorAll(`#playerCard${player}`)[playIndex].click();
+        document.querySelectorAll(`#playerCard${player}`)[playIndex].style.opacity = "0.5";
+        document.querySelectorAll(`#playerCard${player}`)[playIndex].classList.add("fade");
+        sleep(2000).then(() => { document.querySelectorAll(`#playerCard${player}`)[playIndex].click(); });
         return true;
     }
     return false;
 } 
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
