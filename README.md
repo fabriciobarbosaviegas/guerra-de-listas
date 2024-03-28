@@ -60,24 +60,26 @@ Naipes e cores das cartas não são considerados. Cartas de mesmo valor são con
 5. À esquerda da lista principal está o baralho, à direita, a "pilha de descarte".
 
 ## Jogadas Possíveis:
+
 1. ### Adicionar carta à lista principal:
-    - Jogue uma carta não presente em sua lista, na lista principal.
+    - Adicione uma carta de sua mão, não presente em sua lista, na lista principal.
 
 2. ### Roubar carta da lista principal:
-    - Jogue uma carta presente na lista principal.
-    - A carta vai para a pilha de descarte; a carta da lista principal vai para o final da lista do jogador.
-    - Se a lista principal esvaziar, adicione 4 cartas novas.
+    - Descarte uma carta de sua mão, colocando-a na pilha de descarte.
+    - Remova uma carta igual à descartada de qualquer posição da lista principal (lembre-se que consideramos como iguais todas as cartas de mesmo número ou figura, independente de cor ou naipe).
+    - Adicione a carta removida ao final da sua lista.
+    - Se a lista principal esvaziar, adicione 4 novas cartas do baralho.
 
 3. ### Roubar cartas da lista de outro jogador:
-    - Jogue uma carta presente na lista de outro jogador.
-    - A carta vai para a pilha de descarte; roube todas as cartas a partir dela da lista do jogador.
-    - Movimente as cartas roubadas para o final da sua lista.
+    - Descarte uma carta de sua mão que também exista na lista de outro jogador.
+    - Remova uma carta igual à descartada, juntamente com todas as cartas subsequentes da lista do outro jogador.
+    - Adicione as cartas removidas ao final da sua lista.
 
 4. ### Cartas da própria lista:
-    - Jogue uma carta presente em sua lista; ela é descartada.
+    - Descarte uma carta da sua mão que também exista na sua lista.
 
 5. ### Ordenar a própria lista:
-    - Gaste um turno para mudar a posição das cartas em sua lista.
+    - Gaste um turno para mudar a posição das cartas em sua lista conforme a sua vontade (isso pode ser especialmente útil para minimizar os danos que outros jogadores possam causar a sua lista).
 
 ## Como Jogar:
 1. Em cada rodada, escolha uma das seguintes [jogadas possíveis](#jogadas-possíveis):
