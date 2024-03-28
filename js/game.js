@@ -207,11 +207,21 @@ function stealsList(card, player){
 }
 
 function seeSortOption(player){
-    if(document.querySelectorAll(`#player${player}ListCard`).length <= 1 || player != currentPlayer){
-        document.querySelector(`#sortButton${player}`).classList.add("d-none")
+    if(!botBool){
+        if((document.querySelectorAll(`#player${player}ListCard`).length <= 1 || player != currentPlayer)){
+            document.querySelector(`#sortButton${player}`).classList.add("d-none")
+        }
+        else{
+            document.querySelector(`#sortButton${player}`).classList.remove("d-none")
+        }
     }
     else{
-        document.querySelector(`#sortButton${player}`).classList.remove("d-none")
+        if((document.querySelectorAll(`#player${player}ListCard`).length <= 1 || player != currentPlayer)){
+            document.querySelector(`#sortButton${player}`).classList.add("d-none")
+        }
+        else if(player == 1){
+            document.querySelector(`#sortButton${player}`).classList.remove("d-none")
+        }
     }
 }
 
