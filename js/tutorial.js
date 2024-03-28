@@ -14,6 +14,16 @@
 * copies or substantial portions of the Software.
 */
 
+function simulationDisclaimer(){
+    createModalTip("simulationDisclaimer", "Você está prestes a utilizar um simulador, o objetivo dessa seção é dar ao professor um ambiente simples onde ele possa simular as jogadas possíveis para auxiliar na construção de seu plano de aula. No simulador o usuário joga pelos 4 jogadores livremente, sem nenhum tipo de tutorial ou bots na partida. Caso ainda não saiba jogar e queira um tutorial, selecione a opção ''Tutorial'' no menu inicial.");
+    simulationDisclaimerModal = new bootstrap.Modal(document.querySelector("#simulationDisclaimerModal"), {});
+    simulationDisclaimerModal.show();
+
+    document.querySelectorAll("#nextTutorial")[1].addEventListener("click", () => {
+        simulationDisclaimerModal.hide();
+    });
+}
+
 function tutorialTips(){
     document.querySelector('#tutorialModal').querySelector('button').removeEventListener('click', () => {});
 
@@ -161,6 +171,8 @@ function ownListPlayTip(handCardIndex){
         ownListModal.show();
             
         document.querySelector('#ownListModal').querySelector('button').addEventListener('click', () => {
+    
+    
             document.querySelector('#playerList1').classList.remove('highlight');
             ownListModal.hide();
         });
